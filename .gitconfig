@@ -1,0 +1,24 @@
+[include]
+    path = ~/.gituser
+[diff]
+    tool = vimdiff
+[difftool]
+	prompt = false
+[alias]
+    dt = difftool
+    co = checkout
+[giggle]
+	main-window-maximized = false
+	main-window-geometry = 1252x830+2407+95
+	history-view-vpane-position = 249
+	main-window-view = HistoryView
+	file-view-vpane-position = 529
+[core]
+    editor = /usr/bin/vim
+[merge]
+    tool = vimdiff
+    conflictstyle = diff3
+[mergetool]
+    prompt = false
+[color]
+    ui = auto

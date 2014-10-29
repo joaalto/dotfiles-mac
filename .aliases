@@ -1,0 +1,174 @@
+alias vgs='vagrant status'
+alias vgss='vagrant ssh'
+
+#alias subl='env UBUNTU_MENUPROXY=0 subl'
+#alias eclipse='nh env UBUNTU_MENUPROXY= eclipse'
+#alias ls='ls --color=auto'
+alias cljsbuild='lein cljsbuild auto'
+alias ccljsbuild='lein do cljsbuild clean, cljsbuild auto'
+
+alias buu='brew update && brew upgrade'
+alias cask='brew cask'
+
+alias pod='popd'
+alias ll='ls -alFh'
+alias la='ls -A'
+alias l='ls -CF'
+alias xo='xdg-open'
+alias lit='light &> /dev/null'
+
+alias sedi='sed -i'
+
+alias reds='nh redshift -t 5500:3000'
+
+alias zshconf='vim ~/.zshrc'
+alias zshreload='. ~/.zshrc && . ~/.oh-my-zsh/plugins/gradle/gradle.plugin.zsh && alreload'
+alias alreload='. ~/.aliases'
+alias alconf='vim ~/.aliases'
+
+alias tmconf='vim ~/.tmux.conf'
+
+# Vim
+alias viconf='vim ~/.vimrc'
+
+vic() {
+    vim --cmd "cd $1" $2 $3 $4
+}
+
+alias upd='sudo apt-get update'
+alias upg='sudo apt-get upgrade'
+alias show='sudo apt-cache show'
+alias showp='sudo apt-cache showpkg'
+#alias auu='~/up'
+#alias remo='sudo apt-get remove'
+#alias sag='sudo apt-get'
+#alias purge='sag purge'
+#alias nau='nohup nautilus . &> /dev/null &'
+alias lt='ll -tr'
+#alias sus='sudo pm-suspend'
+#alias hib='sudo pm-hibernate'
+#alias sysmon='gnome-system-monitor'
+alias chr='nh google-chrome'
+alias dv='dirs -v'
+alias ..='cd ..'
+alias ...='cd ../..'
+alias ....='cd ../../..'
+alias .....='cd ../../../..'
+alias pd1='pd +1'
+alias pd2='pd +2'
+alias less='less -i'
+#alias unityReplace='DISPLAY=:0 unity --replace &'
+#alias compizReplace='DISPLAY=:0 compiz --replace &'
+alias clips='xclip -selection clipboard'
+alias ee='echo -e'
+#alias ack='ack-grep -i'
+
+# Git
+#alias gstat='git status'
+#alias gst='gstat'
+#alias gsl='git stash list'
+alias gts='gst'
+alias gitconf='vim ~/.gitconfig'
+alias gc='gcomm'
+alias gscommit='git stash && git svn dcommit && git stash pop'
+alias gsupdate='git stash && git svn rebase && git stash pop'
+alias qg='nh qgit'
+alias dt='git difftool'
+alias ga='gadd'
+alias glp='git log -p'
+
+gcomm() {
+     if [ -z "$1" ];
+        then command git commit
+    else
+        command git commit -m "$1"
+    fi
+}
+
+gadd() {
+    if [ -z "$1" ];
+        then command git add . && git status
+    else
+        command git add "$1" && git status
+    fi
+}
+
+gdl() {
+    gradle "$@"
+}
+
+grrep() {
+    grep -ri "$1" --include="$2"
+}
+
+uzl() {
+    unzip -l "$1" | less
+}
+
+clip() {
+    "$1" | xclip -selection clipboard
+}
+
+rr() {
+    rm -r "$@"
+}
+
+rf() {
+    rm -rf "$@"
+}
+
+
+pd() {
+    if [ -z "$1" ];
+        then pushd && dv
+    else
+        pushd "$1" && dv
+    fi
+}
+
+pdl() {
+    if [ -z "$1" ];
+        then pushd && dv && ll
+    else
+        pushd "$1" && dv && ll
+    fi
+}
+
+cl() {
+    cd "$1" && ll
+}
+
+kil() {
+    pkill -9 -f "$1"
+}
+
+peg() {
+    nocorrect ps -ef | grep "$1"
+}
+
+mkcd() {
+    mkdir "$1" && cd "$1"
+}
+
+nh() {
+    nocorrect nohup "$@" &> /dev/null &
+}
+
+ged() {
+    nohup gedit "$1" &> /dev/null &
+}
+
+inst()
+{
+  sudo apt-get install $1
+}
+
+fnd() {
+    if [ -z "$2" ];
+        then find . -iname "$1"
+    else
+        find "$2" -iname "$1"
+    fi
+}
+
+
