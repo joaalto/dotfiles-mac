@@ -1,5 +1,6 @@
 alias vgs='vagrant status'
 alias vgss='vagrant ssh'
+alias vgp='vagrant provision'
 
 #alias subl='env UBUNTU_MENUPROXY=0 subl'
 #alias eclipse='nh env UBUNTU_MENUPROXY= eclipse'
