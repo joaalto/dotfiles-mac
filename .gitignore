@@ -1,0 +1,23 @@
+*
+
+!.gitignore
+!.zshrc
+!.aliases
+!.bash_aliases
+!.gitconfig
+!.gituser.tpl
+!.vimrc
+!/.lein/
+!.lein/profiles.clj
+!keymap-joonas
+!.vrapperrc
+!.tmux.conf
+!.ackrc
+!/eclipse
+!eclipse/**
+!Library/
+!Library/Application\ Support/
+!Library/Application\ Support/LightTable/
+!Library/Application\ Support/LightTable/settings/
+!Library/Application\ Support/LightTable/settings/**
+
