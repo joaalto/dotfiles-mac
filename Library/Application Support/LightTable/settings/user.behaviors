@@ -22,9 +22,16 @@
               (:lt.plugins.vim/activate-vim)
               ]
 
-     ;; Here we can add behaviors to just clojure editors
-     :editor.clojure [(:lt.plugins.clojure/print-length 1000)]}
 
+     ;; Here we can add behaviors to just clojure editors
+     :editor.clojure [(:lt.plugins.clojure/print-length 1000)]
+
+     :files [
+             (:lt.objs.files/file-types [
+                                         {:name "Puppet" :exts [:pp] :mime "text/x-coffeescript" :tags [:editor.puppet]}
+                                         ])]
+
+     }
  ;; You can use the subtract key to remove behavior that may get added by
  ;; another diff
  :- {:app []}}
