@@ -15,7 +15,6 @@ alias pod='popd'
 alias ll='ls -alFh'
 alias la='ls -A'
 alias l='ls -CF'
-alias xo='xdg-open'
 alias lit='light &> /dev/null'
 
 alias sedi='sed -i'
@@ -36,19 +35,8 @@ vic() {
     vim --cmd "cd $1" $2 $3 $4
 }
 
-alias upd='sudo apt-get update'
-alias upg='sudo apt-get upgrade'
-alias show='sudo apt-cache show'
-alias showp='sudo apt-cache showpkg'
-#alias auu='~/up'
-#alias remo='sudo apt-get remove'
-#alias sag='sudo apt-get'
-#alias purge='sag purge'
-#alias nau='nohup nautilus . &> /dev/null &'
 alias lt='ll -tr'
-#alias sus='sudo pm-suspend'
-#alias hib='sudo pm-hibernate'
-#alias sysmon='gnome-system-monitor'
+
 alias chr='nh google-chrome'
 alias dv='dirs -v'
 alias ..='cd ..'
@@ -58,9 +46,6 @@ alias .....='cd ../../../..'
 alias pd1='pd +1'
 alias pd2='pd +2'
 alias less='less -i'
-#alias unityReplace='DISPLAY=:0 unity --replace &'
-#alias compizReplace='DISPLAY=:0 compiz --replace &'
-alias clips='xclip -selection clipboard'
 alias ee='echo -e'
 #alias ack='ack-grep -i'
 
@@ -106,10 +91,6 @@ uzl() {
     unzip -l "$1" | less
 }
 
-clip() {
-    "$1" | xclip -selection clipboard
-}
-
 rr() {
     rm -r "$@"
 }
@@ -153,10 +134,6 @@ mkcd() {
 
 nh() {
     nocorrect nohup "$@" &> /dev/null &
-}
-
-ged() {
-    nohup gedit "$1" &> /dev/null &
 }
 
 inst()
