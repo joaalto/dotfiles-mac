@@ -48,7 +48,7 @@ set o -vi
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(vagrant heroku brew lein git autojump vi-mode)
+plugins=(osx vagrant heroku brew brew-cask lein git autojump vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -94,3 +94,11 @@ export ATOM_PATH='/opt/homebrew-cask/Caskroom/atom/latest'
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
+
+export LC_ALL=en_US.UTF-8  
+export LANG=en_US.UTF-8
+
+set meta-flag on
+set input-meta on
+set output-meta on
+set convert-meta off
