@@ -48,7 +48,7 @@ set o -vi
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(osx vagrant heroku brew brew-cask lein git autojump vi-mode)
+plugins=(fasd web-search osx vagrant heroku brew brew-cask lein git autojump vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -102,3 +102,6 @@ set meta-flag on
 set input-meta on
 set output-meta on
 set convert-meta off
+
+eval "$(fasd --init auto)"
+
