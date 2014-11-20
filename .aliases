@@ -62,6 +62,7 @@ alias qg='nh qgit'
 alias dt='git difftool'
 alias ga='gadd'
 alias glp='git log -p'
+alias gls='git log -s'
 
 gcomm() {
      if [ -z "$1" ];
