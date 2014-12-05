@@ -64,6 +64,7 @@ alias dt='git difftool'
 alias ga='gadd'
 alias glp='git log -p'
 alias gls='git log --stat'
+alias gitlconf='git config --local -e'
 
 gcomm() {
      if [ -z "$1" ];
