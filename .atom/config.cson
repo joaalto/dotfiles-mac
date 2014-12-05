@@ -1,0 +1,22 @@
+'global':
+  'exception-reporting':
+    'userId': '0378aabf-ac56-5631-6f9e-34e6f445bfe4'
+  'welcome':
+    'showOnStartup': false
+  'metrics':
+    'userId': '44a636dc264f18b3195fb26e20b4951d910b0f2d'
+  'editor':
+    'fontFamily': 'menlo'
+    'fontSize': 14
+    'autoIndent': false
+    'invisibles': {}
+    'showInvisibles': true
+  'core':
+    'disabledPackages': [
+      'sublime-tabs'
+    ]
+  'bracket-matcher':
+    'autocompleteSmartQuotes': false
+    'autocompleteBrackets': false
+  'vim-mode':
+    'useSmartcaseForSearch': true

@@ -22,4 +22,7 @@
 !Library/Application\ Support/LightTable/settings/**
 !Library/Application\ Support/Karabiner/
 !Library/Application\ Support/Karabiner/private.xml
+!/.atom/
+!/.atom/config.cson
+!/.atom/keymap.cson
 
