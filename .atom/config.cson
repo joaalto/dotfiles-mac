@@ -10,7 +10,6 @@
     'fontSize': 14
     'autoIndent': false
     'invisibles': {}
-    'showInvisibles': true
   'core':
     'disabledPackages': [
       'sublime-tabs'
