@@ -14,11 +14,14 @@
 	main-window-view = HistoryView
 	file-view-vpane-position = 529
 [core]
-    editor = /usr/bin/vim
+    editor = /usr/local/bin/vim
+    autocrlf = input
 [merge]
-    tool = vimdiff
+    tool = vimdiff3
     conflictstyle = diff3
-[mergetool]
+[mergetool "vimdiff3"]
+	cmd = vim -f -d -c \"wincmd J\" \"$MERGED\" \"$LOCAL\" \"$BASE\" \"$REMOTE\"
     prompt = false
+    keepBackup = false
 [color]
     ui = auto
