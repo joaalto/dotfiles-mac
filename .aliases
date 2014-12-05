@@ -53,6 +53,7 @@ alias ee='echo -e'
 #alias gstat='git status'
 #alias gst='gstat'
 #alias gsl='git stash list'
+alias grb='git rebase'
 alias gts='gst'
 alias gitconf='vim ~/.gitconfig'
 alias gc='gcomm'
@@ -62,7 +63,7 @@ alias qg='nh qgit'
 alias dt='git difftool'
 alias ga='gadd'
 alias glp='git log -p'
-alias gls='git log -s'
+alias gls='git log --stat'
 
 gcomm() {
      if [ -z "$1" ];
