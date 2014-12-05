@@ -20,4 +20,6 @@
 !Library/Application\ Support/LightTable/
 !Library/Application\ Support/LightTable/settings/
 !Library/Application\ Support/LightTable/settings/**
+!Library/Application\ Support/Karabiner/
+!Library/Application\ Support/Karabiner/private.xml
 

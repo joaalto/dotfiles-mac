@@ -1,0 +1,13 @@
+<?xml version="1.0"?>
+<root>
+  <symbol_map type="KeyCode" name="SECTION" value="0xa" />
+  <symbol_map type="KeyCode" name="TILDE" value="0x1e" />
+
+  <item>
+    <name>Section to tilde</name>
+    <identifier>private.section_to_tilde</identifier>
+    <autogen>--KeyToKey-- KeyCode::SECTION,
+      KeyCode::TILDE, ModifierFlag::OPTION_R
+    </autogen>
+  </item>
+</root>
