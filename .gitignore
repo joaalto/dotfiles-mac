@@ -16,6 +16,7 @@
 !/eclipse
 !eclipse/**
 !Library/
+!com.googlecode.iterm2.plist
 !Library/Application\ Support/
 !Library/Application\ Support/LightTable/
 !Library/Application\ Support/LightTable/settings/
