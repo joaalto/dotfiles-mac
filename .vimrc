@@ -96,3 +96,8 @@ augroup END
 set timeoutlen=500
 set autoread
 au CursorHold * checktime
+
+" Show current file path
+set statusline=%F
+set laststatus=2
+
