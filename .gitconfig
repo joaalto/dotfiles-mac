@@ -16,6 +16,7 @@
 [core]
     editor = /usr/local/bin/vim
     autocrlf = input
+    excludesfile = ~/.gitignore_global
 [merge]
     tool = vimdiff3
     conflictstyle = diff3
