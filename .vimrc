@@ -101,3 +101,4 @@ au CursorHold * checktime
 set statusline=%F
 set laststatus=2
 
+set number
