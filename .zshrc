@@ -26,7 +26,7 @@ set o -vi
 # DISABLE_AUTO_TITLE="true"
 
 # Uncomment the following line to enable command auto-correction.
-# ENABLE_CORRECTION="true"
+ENABLE_CORRECTION="true"
 
 # Uncomment the following line to display red dots whilst waiting for completion.
 # COMPLETION_WAITING_DOTS="true"
@@ -48,7 +48,7 @@ set o -vi
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(fasd web-search osx vagrant heroku brew brew-cask lein git vi-mode)
+plugins=(bower node npm fasd web-search osx vagrant heroku brew brew-cask lein git vi-mode)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -103,4 +103,5 @@ set input-meta on
 set output-meta on
 set convert-meta off
 
+export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home
 
