@@ -148,7 +148,7 @@ fnd() {
     if [ -z "$2" ];
         then find . -iname "$1"
     else
-        find "$2" -iname "$1"
+        find "$1" -iname "$2"
     fi
 }
 
