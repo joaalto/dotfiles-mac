@@ -9,8 +9,13 @@ local gobig = {x = 0, y = 0, w = gw, h = gh}
 local center = {x = 200, y = 0, w = 2200, h = 1300}
 
 local layout1 = {
-    iTerm = {1, gobig},
-    Slack = {1, gobig}
+    iTerm = {1, center},
+    Slack = {1, center},
+    Atom = {1, center},
+}
+
+local fullApps = {
+    "Google Chrome", "iTerm", "Mail", "Slack", "IntelliJ IDEA"
 }
 
 hotkey.bind({"cmd", "shift"}, "J", function()
@@ -20,10 +25,40 @@ hotkey.bind({"cmd", "shift"}, "J", function()
   win:setframe(center)
 end)
 
+function applyPlace(win, place)
+  --local scrs = screen:allscreens()
+  --local scr = scrs[place[1]]
+  --grid.set(win, place[2], scr)
+  win:setframe(center)
+end
+
+function centerWindow()
+    fnutils.each(fullApps, function(appName)
+        local app = appfinder.app_from_name(appName)
+        app = {1, center}
+    end)
+end
+
+hotkey.bind({"cmd", "shift"}, "K", centerWindow())
+
+function applyFrame(frame)
+  return function()
+    for i, appName in ipairs(fullApps) do
+      local app = appfinder.app_from_name(appName)
+      if app then
+        for i, win in ipairs(app:allwindows()) do
+          win:setframe(frame)
+        end
+      end
+    end
+  end
+end
+
 function applyLayout(layout)
   return function()
     for appName, place in pairs(layout) do
       local app = appfinder.app_from_name(appName)
+      --alert.show(app.title)
       if app then
         for i, win in ipairs(app:allwindows()) do
           applyPlace(win, place)
@@ -33,18 +68,18 @@ function applyLayout(layout)
   end
 end
 
-local fullApps = {
-    "Google Chrome", "iTerm", "Mail", "Slack", "IntelliJ IDEA"
-}
-
-function fullScreen()
-    fnutils.each(fullApps, function(app)
-        app = {1, gobig}
-    end)
+function maximizeCurrentWindow()
+  return function()
+    window.focusedwindow():maximize()
+  end
 end
 
+hotkey.bind({"cmd", "shift"}, "I", applyLayout(layout1))
+hotkey.bind({"cmd", "shift"}, "O", applyFrame(center))
+hotkey.bind({"cmd", "shift"}, ".", maximizeCurrentWindow())
+
 function init()
-    fullScreen()
+--    fullScreen()
     applyLayout(layout1)
 end
 
