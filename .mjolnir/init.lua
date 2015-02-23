@@ -9,9 +9,10 @@ local gobig = {x = 0, y = 0, w = gw, h = gh}
 local center = {x = 200, y = 0, w = 2200, h = 1300}
 
 local layout1 = {
-    iTerm = {1, center},
-    Slack = {1, center},
-    Atom = {1, center},
+    iTerm = center,
+    Slack = center,
+    Atom = center,
+    ["Google Chrome"] = center
 }
 
 local fullApps = {
@@ -58,10 +59,10 @@ function applyLayout(layout)
   return function()
     for appName, place in pairs(layout) do
       local app = appfinder.app_from_name(appName)
-      --alert.show(app.title)
       if app then
         for i, win in ipairs(app:allwindows()) do
-          applyPlace(win, place)
+          --applyPlace(win, place)
+          win:setframe(place)
         end
       end
     end
@@ -79,7 +80,6 @@ hotkey.bind({"cmd", "shift"}, "O", applyFrame(center))
 hotkey.bind({"cmd", "shift"}, ".", maximizeCurrentWindow())
 
 function init()
---    fullScreen()
     applyLayout(layout1)
 end
 
