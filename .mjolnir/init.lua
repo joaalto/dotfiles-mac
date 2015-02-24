@@ -14,8 +14,7 @@ local layout1 = {
     Slack = center,
     Atom = center,
     ["Google Chrome"] = center,
-    ["IntelliJ IDEA 14 CE"] = screen.mainscreen():frame()
---    [appfinder.app_from_name("InteliJ IDEA 14")] = screen.mainscreen():frame()
+    ["IntelliJ IDEA"] = screen.mainscreen():frame()
 }
 
 local fullApps = {
@@ -81,6 +80,10 @@ end
 hotkey.bind({"cmd", "shift"}, "I", applyLayout(layout1))
 hotkey.bind({"cmd", "shift"}, "O", applyFrame(center))
 hotkey.bind({"cmd", "shift"}, ".", maximizeCurrentWindow())
+
+hotkey.bind({"cmd", "shift"}, "-", function()
+    alert.show(window.focusedwindow():application():title())
+end)
 
 function init()
     applyLayout(layout1)
