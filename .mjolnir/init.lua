@@ -53,19 +53,19 @@ hotkey.bind({"cmd", "shift"}, ".", function()
   window.focusedwindow():maximize()
 end)
 
+-- Toggle current window fullscreen
+hotkey.bind({"cmd", "shift"}, "'", function()
+  local toggle = not window.focusedwindow():isfullscreen()
+  window.focusedwindow():setfullscreen(toggle)
+end)
+
 -- Center current window
 hotkey.bind({"cmd", "shift"}, "J", function()
   window.focusedwindow():setframe(center)
 end)
 
--- Toggle current window fullscreen
-hotkey.bind({"cmd", "shift"}, "´", function()
-  local toggle = not window.focusedwindow():isfullscreen()
-  window.focusedwindow():setfullscreen(toggle)
-end)
-
 -- Show app title
-hotkey.bind({"cmd", "shift"}, "'", function()
+hotkey.bind({"cmd", "shift"}, "´", function()
     alert.show(window.focusedwindow():application():title())
 end)
 
