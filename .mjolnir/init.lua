@@ -6,7 +6,6 @@ local alert = require "mjolnir.alert"
 local appfinder = require "mjolnir.cmsj.appfinder"
 local screen = require "mjolnir.screen"
 
-local gobig = {x = 0, y = 0, w = gw, h = gh}
 local center = {x = 200, y = 0, w = 2200, h = 1300}
 
 local layout1 = {
@@ -20,29 +19,6 @@ local layout1 = {
 local fullApps = {
     "Atom", "Google Chrome", "iTerm", "Mail", "Slack", "IntelliJ IDEA"
 }
-
-hotkey.bind({"cmd", "shift"}, "J", function()
-  local win = window.focusedwindow()
---  local f = win:frame()
---  f.x = f.x + 10
-  win:setframe(center)
-end)
-
-function applyPlace(win, place)
-  --local scrs = screen:allscreens()
-  --local scr = scrs[place[1]]
-  --grid.set(win, place[2], scr)
-  win:setframe(center)
-end
-
-function centerWindow()
-    fnutils.each(fullApps, function(appName)
-        local app = appfinder.app_from_name(appName)
-        app = {1, center}
-    end)
-end
-
-hotkey.bind({"cmd", "shift"}, "K", centerWindow())
 
 function applyFrame(frame)
   return function()
@@ -63,7 +39,6 @@ function applyLayout(layout)
       local app = appfinder.app_from_name(appName)
       if app then
         for i, win in ipairs(app:allwindows()) do
-          --applyPlace(win, place)
           win:setframe(place)
         end
       end
@@ -92,6 +67,10 @@ hotkey.bind({"cmd", "shift"}, "I", applyLayout(layout1))
 hotkey.bind({"cmd", "shift"}, "O", applyFrame(center))
 hotkey.bind({"cmd", "shift"}, ".", maximizeCurrentWindow())
 hotkey.bind({"cmd", "shift"}, "-", maximizeAllWindows())
+
+hotkey.bind({"cmd", "shift"}, "J", function()
+  window.focusedwindow():setframe(center)
+end)
 
 hotkey.bind({"cmd", "shift"}, "'", function()
     alert.show(window.focusedwindow():application():title())
