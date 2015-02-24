@@ -34,12 +34,6 @@ function applyLayout(layout)
   end
 end
 
-function maximizeCurrentWindow()
-  return function()
-    window.focusedwindow():maximize()
-  end
-end
-
 function maximizeAllWindows()
   return function()
     fnutils.each(fullApps, function(appName)
@@ -52,8 +46,12 @@ function maximizeAllWindows()
 end
 
 hotkey.bind({"cmd", "shift"}, "I", applyLayout(layout1))
-hotkey.bind({"cmd", "shift"}, ".", maximizeCurrentWindow())
 hotkey.bind({"cmd", "shift"}, "-", maximizeAllWindows())
+
+-- Maximize current window
+hotkey.bind({"cmd", "shift"}, ".", function()
+  window.focusedwindow():maximize()
+end)
 
 -- Center current window
 hotkey.bind({"cmd", "shift"}, "J", function()
