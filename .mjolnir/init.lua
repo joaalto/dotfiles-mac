@@ -7,31 +7,19 @@ local appfinder = require "mjolnir.cmsj.appfinder"
 local screen = require "mjolnir.screen"
 
 local center = {x = 200, y = 0, w = 2200, h = 1300}
+local maxSize = screen.mainscreen():frame()
 
 local layout1 = {
-    iTerm = center,
+    iTerm = maxSize,
     Slack = center,
     Atom = center,
     ["Google Chrome"] = center,
-    ["IntelliJ IDEA"] = screen.mainscreen():frame()
+    ["IntelliJ IDEA"] = maxSize
 }
 
 local fullApps = {
     "Atom", "Google Chrome", "iTerm", "Mail", "Slack", "IntelliJ IDEA"
 }
-
-function applyFrame(frame)
-  return function()
-    for i, appName in ipairs(fullApps) do
-      local app = appfinder.app_from_name(appName)
-      if app then
-        for i, win in ipairs(app:allwindows()) do
-          win:setframe(frame)
-        end
-      end
-    end
-  end
-end
 
 function applyLayout(layout)
   return function()
@@ -64,7 +52,6 @@ function maximizeAllWindows()
 end
 
 hotkey.bind({"cmd", "shift"}, "I", applyLayout(layout1))
-hotkey.bind({"cmd", "shift"}, "O", applyFrame(center))
 hotkey.bind({"cmd", "shift"}, ".", maximizeCurrentWindow())
 hotkey.bind({"cmd", "shift"}, "-", maximizeAllWindows())
 
