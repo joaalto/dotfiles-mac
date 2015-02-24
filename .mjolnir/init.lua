@@ -18,7 +18,7 @@ local layout1 = {
 }
 
 local fullApps = {
-    "Google Chrome", "iTerm", "Mail", "Slack", "IntelliJ IDEA"
+    "Atom", "Google Chrome", "iTerm", "Mail", "Slack", "IntelliJ IDEA"
 }
 
 hotkey.bind({"cmd", "shift"}, "J", function()
@@ -77,11 +77,23 @@ function maximizeCurrentWindow()
   end
 end
 
+function maximizeAllWindows()
+  return function()
+    fnutils.each(fullApps, function(appName)
+      local app = appfinder.app_from_name(appName)
+      fnutils.each(app:allwindows(), function(win)
+        win:maximize()
+      end)
+    end)
+  end
+end
+
 hotkey.bind({"cmd", "shift"}, "I", applyLayout(layout1))
 hotkey.bind({"cmd", "shift"}, "O", applyFrame(center))
 hotkey.bind({"cmd", "shift"}, ".", maximizeCurrentWindow())
+hotkey.bind({"cmd", "shift"}, "-", maximizeAllWindows())
 
-hotkey.bind({"cmd", "shift"}, "-", function()
+hotkey.bind({"cmd", "shift"}, "'", function()
     alert.show(window.focusedwindow():application():title())
 end)
 
