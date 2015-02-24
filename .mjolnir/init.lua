@@ -4,6 +4,7 @@ local window = require "mjolnir.window"
 local fnutils = require "mjolnir.fnutils" 
 local alert = require "mjolnir.alert"
 local appfinder = require "mjolnir.cmsj.appfinder"
+local screen = require "mjolnir.screen"
 
 local gobig = {x = 0, y = 0, w = gw, h = gh}
 local center = {x = 200, y = 0, w = 2200, h = 1300}
@@ -12,7 +13,9 @@ local layout1 = {
     iTerm = center,
     Slack = center,
     Atom = center,
-    ["Google Chrome"] = center
+    ["Google Chrome"] = center,
+    ["IntelliJ IDEA 14 CE"] = screen.mainscreen():frame()
+--    [appfinder.app_from_name("InteliJ IDEA 14")] = screen.mainscreen():frame()
 }
 
 local fullApps = {
