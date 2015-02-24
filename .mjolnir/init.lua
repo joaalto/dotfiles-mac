@@ -55,10 +55,18 @@ hotkey.bind({"cmd", "shift"}, "I", applyLayout(layout1))
 hotkey.bind({"cmd", "shift"}, ".", maximizeCurrentWindow())
 hotkey.bind({"cmd", "shift"}, "-", maximizeAllWindows())
 
+-- Center current window
 hotkey.bind({"cmd", "shift"}, "J", function()
   window.focusedwindow():setframe(center)
 end)
 
+-- Toggle current window fullscreen
+hotkey.bind({"cmd", "shift"}, "´", function()
+  local toggle = not window.focusedwindow():isfullscreen()
+  window.focusedwindow():setfullscreen(toggle)
+end)
+
+-- Show app title
 hotkey.bind({"cmd", "shift"}, "'", function()
     alert.show(window.focusedwindow():application():title())
 end)
