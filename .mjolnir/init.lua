@@ -10,15 +10,16 @@ local center = {x = 200, y = 0, w = 2200, h = 1300}
 local maxSize = screen.mainscreen():frame()
 
 local layout1 = {
-    iTerm = maxSize,
-    Slack = center,
     Atom = center,
     ["Google Chrome"] = center,
-    ["IntelliJ IDEA"] = maxSize
+    ["IntelliJ IDEA"] = maxSize,
+    iTerm = maxSize,
+    Mail = center,
+    Slack = center
 }
 
 local fullApps = {
-    "Atom", "Google Chrome", "iTerm", "Mail", "Slack", "IntelliJ IDEA"
+    "Atom", "Google Chrome", "IntelliJ IDEA", "iTerm", "Mail", "Slack"
 }
 
 function applyLayout(layout)
