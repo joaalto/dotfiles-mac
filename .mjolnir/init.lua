@@ -18,7 +18,7 @@ local layout1 = {
     Slack = center
 }
 
-local fullApps = {
+local apps = {
     "Atom", "Google Chrome", "IntelliJ IDEA", "iTerm", "Mail", "Slack"
 }
 
@@ -35,9 +35,9 @@ function applyLayout(layout)
   end
 end
 
-function maximizeAllWindows()
+function maximizeAppWindows()
   return function()
-    fnutils.each(fullApps, function(appName)
+    fnutils.each(apps, function(appName)
       local app = appfinder.app_from_name(appName)
       if app then
         fnutils.each(app:allwindows(), function(win)
@@ -49,7 +49,7 @@ function maximizeAllWindows()
 end
 
 hotkey.bind({"cmd", "shift"}, "I", applyLayout(layout1))
-hotkey.bind({"cmd", "shift"}, "-", maximizeAllWindows())
+hotkey.bind({"cmd", "shift"}, "-", maximizeAppWindows())
 
 -- Maximize current window
 hotkey.bind({"cmd", "shift"}, ".", function()
