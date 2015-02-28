@@ -39,9 +39,11 @@ function maximizeAllWindows()
   return function()
     fnutils.each(fullApps, function(appName)
       local app = appfinder.app_from_name(appName)
-      fnutils.each(app:allwindows(), function(win)
-        win:maximize()
-      end)
+      if app then
+        fnutils.each(app:allwindows(), function(win)
+          win:maximize()
+        end)
+      end
     end)
   end
 end
