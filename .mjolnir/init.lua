@@ -16,7 +16,7 @@ local layout1 = {
     iTerm = maxSize,
     Mail = center,
     Slack = center,
-    Outlook = center
+    ["Microsoft Outlook"] = center
 }
 
 local apps = {
