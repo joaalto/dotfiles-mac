@@ -15,7 +15,8 @@ local layout1 = {
     ["IntelliJ IDEA"] = maxSize,
     iTerm = maxSize,
     Mail = center,
-    Slack = center
+    Slack = center,
+    Outlook = center
 }
 
 local apps = {
