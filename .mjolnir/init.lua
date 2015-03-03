@@ -17,11 +17,12 @@ local layout1 = {
     iTerm = maxSize,
     Mail = center,
     Slack = center,
+    Spotify = center,
     ["Microsoft Outlook"] = center
 }
 
 local apps = {
-    "Atom", "Google Chrome", "HipChat", "IntelliJ IDEA", "iTerm", "Mail", "Slack", "Microsoft Outlook"
+    "Atom", "Google Chrome", "HipChat", "IntelliJ IDEA", "iTerm", "Mail", "Slack", "Spotify", "Microsoft Outlook"
 }
 
 function applyLayout(layout)
