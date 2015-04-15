@@ -23,6 +23,8 @@ Bundle 'einars/js-beautify'
 "Bundle 'marijnh/tern_for_vim'
 Bundle 'wincent/Command-T'
 Bundle 'derekwyatt/vim-scala'
+Bundle 'bling/vim-airline'
+Bundle 'bling/vim-bufferline'
 
 filetype plugin indent on
 
@@ -75,6 +77,7 @@ nnoremap <Leader>p :bp<cr>
 nnoremap <Leader>bw :bw<cr>
 nnoremap <Leader>w :w<cr>
 nnoremap <Leader>x :x<cr>
+nnoremap <Leader>xa :xa<cr>
 nnoremap <Leader>wq :wq<cr>
 nnoremap <Leader>q :q<cr>
 nnoremap <Leader>qa :qa<cr>
@@ -102,3 +105,4 @@ set statusline=%F
 set laststatus=2
 
 set number
+set noro
