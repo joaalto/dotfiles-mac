@@ -6,25 +6,25 @@ call vundle#rc()
 
 " let Vundle manage Vundle
 " required! 
-Bundle 'gmarik/Vundle.vim'
+Plugin 'gmarik/Vundle.vim'
 
 " My bundles here:
 "
 " original repos on GitHub
-Bundle 'tpope/vim-fugitive'
-Bundle 'tpope/vim-unimpaired'
-Bundle 'tpope/vim-fireplace'
-Bundle 'altercation/vim-colors-solarized'
-Bundle 'pangloss/vim-javascript'
-Bundle 'nathanaelkane/vim-indent-guides'
-Bundle 'Chiel92/vim-autoformat'
-Bundle 'einars/js-beautify'
-"Bundle 'Valloric/YouCompleteMe'
-"Bundle 'marijnh/tern_for_vim'
-Bundle 'wincent/Command-T'
-Bundle 'derekwyatt/vim-scala'
-Bundle 'bling/vim-airline'
-Bundle 'bling/vim-bufferline'
+Plugin 'tpope/vim-fugitive'
+Plugin 'tpope/vim-unimpaired'
+Plugin 'tpope/vim-fireplace'
+Plugin 'altercation/vim-colors-solarized'
+Plugin 'pangloss/vim-javascript'
+Plugin 'nathanaelkane/vim-indent-guides'
+Plugin 'Chiel92/vim-autoformat'
+Plugin 'einars/js-beautify'
+"Plugin 'Valloric/YouCompleteMe'
+"Plugin 'marijnh/tern_for_vim'
+Plugin 'wincent/Command-T'
+Plugin 'derekwyatt/vim-scala'
+Plugin 'bling/vim-airline'
+Plugin 'bling/vim-bufferline'
 
 filetype plugin indent on
 
