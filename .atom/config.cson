@@ -10,13 +10,20 @@
     autoIndent: false
     tabLength: 4
     invisibles: {}
-    fontSize: 15
+    fontSize: 14
   core:
     disabledPackages: [
       "sublime-tabs"
+    ]
+    themes: [
+      "atom-dark-ui"
+      "one-dark-syntax"
     ]
   "bracket-matcher":
     autocompleteBrackets: false
     autocompleteSmartQuotes: false
   "vim-mode":
     useSmartcaseForSearch: true
+  autosave:
+    enabled: true
+  react: {}
