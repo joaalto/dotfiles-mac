@@ -16,7 +16,5 @@ luarocks install mjolnir.alert
 luarocks install mjolnir.cmsj.appfinder
 luarocks install mjolnir.screen
 
-ln -s ~/dotfiles-mac/.aliases ~
-
-ln -s ~/dotfiles-mac/.mjolnir ~
+~/dotfiles-mac/links.sh
 
