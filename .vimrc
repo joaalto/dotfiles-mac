@@ -107,3 +107,5 @@ set laststatus=2
 
 set number
 set noro
+
+set diffopt=filler,vertical
