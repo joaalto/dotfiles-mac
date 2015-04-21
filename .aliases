@@ -29,6 +29,7 @@ alias alconf='vim ~/.aliases'
 alias tmconf='vim ~/.tmux.conf'
 
 # Vim
+alias vi='vim'
 alias viconf='vim ~/.vimrc'
 
 vic() {
