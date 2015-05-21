@@ -18,11 +18,12 @@ local layout1 = {
     Mail = center,
     Slack = center,
     Spotify = center,
-    ["Microsoft Outlook"] = center
+    ["Microsoft Outlook"] = center,
+    Flowdock = center
 }
 
 local apps = {
-    "Atom", "Google Chrome", "HipChat", "IntelliJ IDEA", "iTerm", "Mail", "Slack", "Spotify", "Microsoft Outlook"
+    "Atom", "Google Chrome", "HipChat", "IntelliJ IDEA", "iTerm", "Mail", "Slack", "Spotify", "Microsoft Outlook", "Flowdock"
 }
 
 function applyLayout(layout)
