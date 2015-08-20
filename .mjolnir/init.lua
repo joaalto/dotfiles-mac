@@ -1,3 +1,6 @@
+package.path = package.path .. ';/usr/local/Cellar/lua/5.2.3_2/share/lua/5.2/?.lua'
+package.cpath = package.cpath .. ';/usr/local/lib/lua/5.2/?.so'
+
 local application = require "mjolnir.application"  
 local hotkey = require "mjolnir.hotkey"  
 local window = require "mjolnir.window"  
