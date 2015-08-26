@@ -1,3 +1,6 @@
+let g:bufferline_active_buffer_left = '['
+let g:bufferline_active_buffer_right = ']'
+
 set nocompatible
 filetype off
 
@@ -109,3 +112,4 @@ set number
 set noro
 
 set diffopt=filler,vertical
+
