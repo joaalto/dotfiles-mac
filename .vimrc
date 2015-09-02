@@ -26,6 +26,7 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'hydrozen/solarized', {'rtp': 'vim-colors-solarized'}
+Plugin 'lambdatoast/elm.vim'
 
 filetype plugin indent on
 
