@@ -46,7 +46,7 @@ colorscheme solarized
 
 "set foldcolumn=2
 "highlight! link FoldColumn Normal
-set hidden
+"set hidden
 
 """""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " => Text, tab and indent related
@@ -114,3 +114,19 @@ set noro
 
 set diffopt=filler,vertical
 
+" autoread and autowrite
+augroup save
+  au!
+  au InsertLeave * wall
+augroup END
+set nohidden
+set nobackup
+set noswapfile
+set nowritebackup
+set autoread
+set autowrite
+set autowriteall
+
+" persistent-undo
+set undodir=~/.vim/undo
+set undofile
