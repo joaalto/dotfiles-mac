@@ -118,6 +118,7 @@ set diffopt=filler,vertical
 augroup save
   au!
   au InsertLeave * wall
+  au InsertLeave *.elm wall | ElmMakeCurrentFile
 augroup END
 set nohidden
 set nobackup
@@ -127,6 +128,8 @@ set autoread
 set autowrite
 set autowriteall
 
+
 " persistent-undo
 set undodir=~/.vim/undo
 set undofile
+
