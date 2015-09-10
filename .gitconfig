@@ -28,3 +28,5 @@
     ui = auto
 [push]
 	default = simple
+[pull]
+    rebase = true
