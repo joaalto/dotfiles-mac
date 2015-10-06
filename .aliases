@@ -68,6 +68,7 @@ alias ga='gadd'
 alias glp='git log -p'
 alias gls='git log --stat'
 alias gitlconf='git config --local -e'
+alias gspull='git stash && git pull && git stash pop'
 
 gcomm() {
      if [ -z "$1" ];
