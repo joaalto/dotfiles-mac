@@ -29,7 +29,8 @@ Plugin 'derekwyatt/vim-scala'
 Plugin 'bling/vim-airline'
 Plugin 'bling/vim-bufferline'
 Plugin 'hydrozen/solarized', {'rtp': 'vim-colors-solarized'}
-Plugin 'lambdatoast/elm.vim'
+Plugin 'ElmCast/elm-vim'
+"Plugin 'lambdatoast/elm.vim'
 
 filetype plugin indent on
 
@@ -118,7 +119,7 @@ set diffopt=filler,vertical
 augroup save
   au!
   au InsertLeave * wall
-  au InsertLeave *.elm wall | ElmMakeCurrentFile
+  au BufWritePost *.elm | ElmMake
 augroup END
 set nohidden
 set nobackup
