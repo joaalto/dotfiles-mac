@@ -69,6 +69,7 @@ alias glp='git log -p'
 alias gls='git log --stat'
 alias gitlconf='git config --local -e'
 alias gspull='git stash && git pull && git stash pop'
+alias dtc='git difftool --cached'
 
 gcomm() {
      if [ -z "$1" ];
