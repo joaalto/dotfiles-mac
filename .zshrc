@@ -48,7 +48,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(mvn bower node npm fasd web-search osx vagrant heroku brew brew-cask lein git vi-mode)
+plugins=(mvn bower node npm fasd web-search osx vagrant heroku brew brew-cask lein git vi-mode colored-man-pages gulp)
 
 source $ZSH/oh-my-zsh.sh
 
