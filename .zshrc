@@ -105,3 +105,4 @@ set convert-meta off
 
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home
 
+eval "$(thefuck --alias)"
