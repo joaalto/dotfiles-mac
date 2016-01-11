@@ -70,7 +70,7 @@ hotkey.bind({"cmd", "shift"}, "'", function()
 end)
 
 -- Center current window
-hotkey.bind({"cmd", "shift"}, "J", function()
+hotkey.bind({"cmd", "shift"}, "¨", function()
   window.focusedwindow():setframe(center)
 end)
 
