@@ -119,7 +119,7 @@ set diffopt=filler,vertical
 augroup save
   au!
   au InsertLeave * wall
-  au BufWritePost *.elm | ElmMake
+  au BufWritePost *.elm | ElmMake src/Main.elm
 augroup END
 set nohidden
 set nobackup
