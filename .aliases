@@ -1,3 +1,5 @@
+alias runmongo='mongod --fork --logpath ~/log/mongodb.log'
+
 alias vgs='vagrant status'
 alias vgss='vagrant ssh'
 alias vgp='vagrant provision'
