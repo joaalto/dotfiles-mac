@@ -1,8 +1,9 @@
 
-ln -s ~/dotfiles-mac/.aliases ~
-ln -s ~/dotfiles-mac/.mjolnir ~
-ln -s ~/dotfiles-mac/.tmux.conf ~
-ln -s ~/dotfiles-mac/.vimrc ~
-ln -s ~/dotfiles-mac/.zshrc ~
+ln -sf ~/dotfiles-mac/.aliases ~
+ln -sf ~/dotfiles-mac/.mjolnir ~
+ln -sf ~/dotfiles-mac/.tmux.conf ~
+ln -sf ~/dotfiles-mac/.vimrc ~
+ln -sf ~/dotfiles-mac/.zshrc ~
+ln -sf ~/dotfiles-mac/.atom/keymap.cson ~/.atom
 
 # Link git installed by homebrew!
