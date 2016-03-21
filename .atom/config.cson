@@ -1,4 +1,8 @@
 "*":
+  "atom-beautify":
+    _analyticsUserId: "5303689c-8a1d-4a5e-b2cb-ec75889ec4d8"
+    language_elm_beautify_on_save: true
+    language_js_beautify_on_save: true
   autosave:
     enabled: true
   "bracket-matcher":
