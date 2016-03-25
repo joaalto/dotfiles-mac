@@ -7,9 +7,7 @@ brew install lua
 brew install luarocks
 brew install caskroom/cask/brew-cask
 
-brew cask install mjolnir
-
-./mjolnir.sh
+cask install hammerspoon
 
 ~/dotfiles-mac/links.sh
 

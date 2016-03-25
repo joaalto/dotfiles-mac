@@ -1,16 +1,8 @@
-package.path = package.path .. ';/usr/local/Cellar/lua/5.2.3_2/share/lua/5.2/?.lua'
-package.cpath = package.cpath .. ';/usr/local/lib/lua/5.2/?.so'
-
-local application = require "mjolnir.application"  
-local hotkey = require "mjolnir.hotkey"  
-local window = require "mjolnir.window"  
-local fnutils = require "mjolnir.fnutils" 
-local alert = require "mjolnir.alert"
-local appfinder = require "mjolnir.cmsj.appfinder"
-local screen = require "mjolnir.screen"
+--package.path = package.path .. ';/usr/local/Cellar/lua/5.2.4_3/share/lua/5.2/?.lua'
+--package.cpath = package.cpath .. ';/usr/local/lib/lua/5.2/?.so'
 
 local center = {x = 200, y = 0, w = 2200, h = 1300}
-local maxSize = screen.mainscreen():frame()
+local maxSize = hs.screen.mainScreen():frame()
 
 local layout1 = {
     Atom = center,
@@ -55,32 +47,41 @@ function maximizeAppWindows()
   end
 end
 
-hotkey.bind({"cmd", "shift"}, "I", applyLayout(layout1))
-hotkey.bind({"cmd", "shift"}, "-", maximizeAppWindows())
+hs.hotkey.bind({"cmd", "shift"}, "I", applyLayout(layout1))
+hs.hotkey.bind({"cmd", "shift"}, "-", maximizeAppWindows())
 
 -- Maximize current window
-hotkey.bind({"cmd", "shift"}, ".", function()
+hs.hotkey.bind({"cmd", "shift"}, ".", function()
   window.focusedwindow():maximize()
 end)
 
 -- Toggle current window fullscreen
-hotkey.bind({"cmd", "shift"}, "'", function()
+hs.hotkey.bind({"cmd", "shift"}, "'", function()
   local toggle = not window.focusedwindow():isfullscreen()
   window.focusedwindow():setfullscreen(toggle)
 end)
 
 -- Center current window
-hotkey.bind({"cmd", "shift"}, "¨", function()
+hs.hotkey.bind({"cmd", "shift"}, "¨", function()
   window.focusedwindow():setframe(center)
 end)
 
 -- Show app title
-hotkey.bind({"cmd", "shift"}, "´", function()
+hs.hotkey.bind({"cmd", "shift"}, "´", function()
     alert.show(window.focusedwindow():application():title())
 end)
 
 function init()
     applyLayout(layout1)
 end
+
+hs.hotkey.bind({"cmd", "shift"}, "i", function()
+    hs.spotify.displayCurrentTrack()
+end)
+
+hs.hotkey.bind({"cmd", "alt", "ctrl"}, "R", function()
+  hs.reload()
+end)
+hs.alert.show("Config loaded")
 
 init()

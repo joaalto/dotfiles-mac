@@ -1,6 +1,6 @@
 
 ln -sf ~/dotfiles-mac/.aliases ~
-ln -sf ~/dotfiles-mac/.mjolnir ~
+ln -sf ~/dotfiles-mac/.hammerspoon ~
 ln -sf ~/dotfiles-mac/.tmux.conf ~
 ln -sf ~/dotfiles-mac/.vimrc ~
 ln -sf ~/dotfiles-mac/.zshrc ~
