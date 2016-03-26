@@ -1,5 +1,6 @@
-
 ln -sf ~/dotfiles-mac/.aliases ~
+
+rm -r ~/.hammerspoon
 ln -sf ~/dotfiles-mac/.hammerspoon ~
 ln -sf ~/dotfiles-mac/.tmux.conf ~
 ln -sf ~/dotfiles-mac/.vimrc ~
