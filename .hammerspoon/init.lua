@@ -24,10 +24,10 @@ local apps = {
 function applyLayout(layout)
   return function()
     for appName, place in pairs(layout) do
-      local app = appfinder.app_from_name(appName)
+      local app = hs.appfinder.appFromName(appName)
       if app then
-        for i, win in ipairs(app:allwindows()) do
-          win:setframe(place)
+        for i, win in ipairs(app:allWindows()) do
+          win:setFrame(place)
         end
       end
     end
@@ -37,9 +37,9 @@ end
 function maximizeAppWindows()
   return function()
     fnutils.each(apps, function(appName)
-      local app = appfinder.app_from_name(appName)
+      local app = hs.appfinder.appFromName(appName)
       if app then
-        fnutils.each(app:allwindows(), function(win)
+        fnutils.each(app:allWindows(), function(win)
           win:maximize()
         end)
       end
@@ -47,28 +47,28 @@ function maximizeAppWindows()
   end
 end
 
-hs.hotkey.bind({"cmd", "shift"}, "I", applyLayout(layout1))
+hs.hotkey.bind({"cmd", "shift"}, "U", applyLayout(layout1))
 hs.hotkey.bind({"cmd", "shift"}, "-", maximizeAppWindows())
 
 -- Maximize current window
 hs.hotkey.bind({"cmd", "shift"}, ".", function()
-  window.focusedwindow():maximize()
+  hs.window.focusedWindow():maximize()
 end)
 
 -- Toggle current window fullscreen
 hs.hotkey.bind({"cmd", "shift"}, "'", function()
-  local toggle = not window.focusedwindow():isfullscreen()
-  window.focusedwindow():setfullscreen(toggle)
+  local toggle = not hs.window.focusedWindow():isFullScreen()
+  hs.window.focusedWindow():setFullScreen(toggle)
 end)
 
 -- Center current window
 hs.hotkey.bind({"cmd", "shift"}, "¨", function()
-  window.focusedwindow():setframe(center)
+  hs.window.focusedWindow():setFrame(center)
 end)
 
 -- Show app title
 hs.hotkey.bind({"cmd", "shift"}, "´", function()
-    alert.show(window.focusedwindow():application():title())
+    hs.alert.show(hs.window.focusedWindow():application():title())
 end)
 
 function init()
