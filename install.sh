@@ -4,10 +4,9 @@ brew install git
 brew install fasd
 brew install httpie
 brew install lua
-brew install luarocks
 brew install caskroom/cask/brew-cask
 
-cask install hammerspoon
+brew cask install hammerspoon
 
 ~/dotfiles-mac/links.sh
 
