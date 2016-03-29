@@ -36,10 +36,10 @@ end
 
 function maximizeAppWindows()
   return function()
-    fnutils.each(apps, function(appName)
+    hs.fnutils.each(apps, function(appName)
       local app = hs.appfinder.appFromName(appName)
       if app then
-        fnutils.each(app:allWindows(), function(win)
+        hs.fnutils.each(app:allWindows(), function(win)
           win:maximize()
         end)
       end
