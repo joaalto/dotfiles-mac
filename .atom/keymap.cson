@@ -34,3 +34,7 @@
   'alt-)': 'vim-mode:move-to-next-paragraph'
   'alt-(': 'vim-mode:move-to-previous-paragraph'
   'Å': 'vim-mode:move-to-first-character-of-line'
+
+# atom-sonic bindings
+'atom-workspace':
+  'ctrl-p': 'atom-sonic:play-file'
