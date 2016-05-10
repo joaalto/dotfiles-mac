@@ -75,7 +75,7 @@ function init()
     applyLayout(layout1)
 end
 
-hs.hotkey.bind({"cmd", "shift"}, "i", function()
+hs.hotkey.bind({"cmd", "shift"}, "o", function()
     hs.spotify.displayCurrentTrack()
 end)
 
