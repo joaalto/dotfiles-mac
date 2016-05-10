@@ -24,6 +24,8 @@
     fontFamily: "menlo"
     invisibles: {}
     tabLength: 4
+  "elm-format":
+    formatOnSave: true
   "exception-reporting":
     userId: "0378aabf-ac56-5631-6f9e-34e6f445bfe4"
   "language-elm":
