@@ -14,6 +14,7 @@ brew cask install iterm2
 brew cask install karabiner
 brew cask install seil
 brew cask install slack
+brew cask install spotify
 
 ~/dotfiles-mac/links.sh
 
