@@ -8,6 +8,7 @@ brew install caskroom/cask/brew-cask
 
 brew cask install alfred
 brew cask install atom
+brew cask install firefox
 brew cask install google-chrome
 brew cask install hammerspoon
 brew cask install iterm2
