@@ -30,7 +30,7 @@
 
 # Fixes for vim-mode bindings for Finnish keyboard layout
 'atom-text-editor.vim-mode:not(.insert-mode)':
-  'alt-4': 'vim-mode:move-to-last-character-of-line'
+  # 'alt-4': 'vim-mode:move-to-last-character-of-line'
   'alt-)': 'vim-mode:move-to-next-paragraph'
   'alt-(': 'vim-mode:move-to-previous-paragraph'
   'Å': 'vim-mode:move-to-first-character-of-line'
