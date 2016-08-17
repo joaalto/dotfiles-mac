@@ -92,7 +92,7 @@ source ~/.aliases
 
 unsetopt autopushd
 
-export ATOM_PATH='/opt/homebrew-cask/Caskroom/atom/latest'
+#export ATOM_PATH='/usr/local/Caskroom/atom/1.9.7/Atom.app'
 
 ### Added by the Heroku Toolbelt
 export PATH="/usr/local/heroku/bin:$PATH"
