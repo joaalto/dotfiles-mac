@@ -108,3 +108,6 @@ set convert-meta off
 export JAVA_HOME=/Library/Java/JavaVirtualMachines/jdk1.8.0_25.jdk/Contents/Home
 
 eval "$(thefuck --alias)"
+
+export NVM_DIR="/Users/joonas/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
