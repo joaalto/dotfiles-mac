@@ -1,4 +1,5 @@
 alias runmongo='mongod --fork --logpath ~/log/mongodb.log'
+alias runpostgres='pg_ctl -D /usr/local/var/postgres -l logfile start'
 
 alias vgs='vagrant status'
 alias vgss='vagrant ssh'
