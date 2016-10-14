@@ -5,6 +5,7 @@ brew install fasd
 brew install httpie
 brew install lua
 brew install caskroom/cask/brew-cask
+brew install terminal-notifier
 
 brew cask install alfred
 brew cask install atom
