@@ -50,7 +50,7 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(mvn bower node npm fasd web-search osx vagrant heroku brew brew-cask lein git vi-mode colored-man-pages gulp)
+plugins=(mvn bower node npm fasd web-search osx vagrant heroku lein git vi-mode colored-man-pages gulp docker aws)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -111,3 +111,12 @@ eval "$(thefuck --alias)"
 
 export NVM_DIR="/Users/joonas/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# AWS CLI completions
+#source /usr/local/share/zsh/site-functions/_aws
+
+export PATH="/Users/joonas/code/yle/yle-aws-tools/bin:$PATH"
+
+
+# added by travis gem
+[ -f /Users/joonas/.travis/travis.sh ] && source /Users/joonas/.travis/travis.sh
