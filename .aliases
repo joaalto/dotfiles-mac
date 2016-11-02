@@ -13,7 +13,7 @@ alias luarocks='luarocks-5.2'
 alias cljsbuild='lein cljsbuild auto'
 alias ccljsbuild='lein do cljsbuild clean, cljsbuild auto'
 
-alias buu='brew update && brew upgrade --all'
+alias buu='brew update && brew upgrade'
 alias cask='brew cask'
 
 alias pod='popd'
@@ -32,6 +32,10 @@ alias alreload='. ~/.aliases'
 alias alconf='vim ~/.aliases'
 
 alias tmconf='vim ~/.tmux.conf'
+
+# Yarn
+alias yadd='yarn add'
+alias yrm='yarn remove'
 
 # Vim
 alias vi='vim'
