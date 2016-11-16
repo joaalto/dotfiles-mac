@@ -2,6 +2,7 @@
 --package.cpath = package.cpath .. ';/usr/local/lib/lua/5.2/?.so'
 
 local center = {x = 200, y = 0, w = 2200, h = 1300}
+local medium = {x = 350, y = 0, w = 2200, h = 1000}
 local maxSize = hs.screen.mainScreen():frame()
 
 local layout1 = {
@@ -64,6 +65,11 @@ end)
 -- Center current window
 hs.hotkey.bind({"cmd", "shift"}, "¨", function()
   hs.window.focusedWindow():setFrame(center)
+end)
+
+-- Medium window size
+hs.hotkey.bind({"cmd", "shift"}, "+", function()
+  hs.window.focusedWindow():setFrame(medium)
 end)
 
 -- Show app title
