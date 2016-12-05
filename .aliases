@@ -34,6 +34,7 @@ alias alconf='vim ~/.aliases'
 alias tmconf='vim ~/.tmux.conf'
 
 # Yarn
+alias y='yarn'
 alias yadd='yarn add'
 alias yrm='yarn remove'
 
