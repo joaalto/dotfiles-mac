@@ -134,3 +134,5 @@ set autowriteall
 set undodir=~/.vim/undo
 set undofile
 
+noremap <leader>r :silent w !sonic_pi<CR>
+noremap <leader>S :call system("sonic_pi stop")<CR>
