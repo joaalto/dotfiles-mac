@@ -52,7 +52,7 @@ hs.hotkey.bind({"cmd", "shift"}, "U", applyLayout(layout1))
 hs.hotkey.bind({"cmd", "shift"}, "-", maximizeAppWindows())
 
 -- Maximize current window
-hs.hotkey.bind({"cmd", "shift"}, ".", function()
+hs.hotkey.bind({"cmd", "shift"}, "-", function()
   hs.window.focusedWindow():maximize()
 end)
 
@@ -83,6 +83,10 @@ end
 
 hs.hotkey.bind({"cmd", "shift"}, "å", function()
     hs.spotify.displayCurrentTrack()
+end)
+
+hs.hotkey.bind({"cmd", "alt"}, "p", function()
+    hs.spotify.playpause()
 end)
 
 hs.hotkey.bind({"cmd", "alt", "ctrl"}, "R", function()
