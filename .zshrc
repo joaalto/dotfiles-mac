@@ -50,13 +50,13 @@ ENABLE_CORRECTION="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(history-substring-search mvn bower node npm fasd web-search osx vagrant heroku lein git vi-mode colored-man-pages yarn gulp docker aws)
+plugins=(history-substring-search mvn bower node npm fasd web-search osx heroku lein git vi-mode colored-man-pages yarn docker aws)
 
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
 
-export PATH="$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
+export PATH="$PATH:$HOME/.local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
 
 tmux source-file ~/.tmux.conf
 #tmux
@@ -115,8 +115,16 @@ export NVM_DIR="/Users/joonas/.nvm"
 # AWS CLI completions
 #source /usr/local/share/zsh/site-functions/_aws
 
-export PATH="/Users/joonas/code/yle/yle-aws-tools/bin:$PATH"
+export PATH="/Users/joonas/code/yle/yle-aws-tools/bin:$(yarn global bin):$PATH"
 
+# Source chtf
+if [[ -f /usr/local/share/chtf/chtf.sh ]]; then
+    source "/usr/local/share/chtf/chtf.sh"
+fi
 
 # added by travis gem
 [ -f /Users/joonas/.travis/travis.sh ] && source /Users/joonas/.travis/travis.sh
+
+#[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+#export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+#rvm use ruby-2.3.3

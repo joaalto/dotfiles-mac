@@ -35,5 +35,3 @@
 	keepBackup = false
 [credential]
 	helper = osxkeychain
-[fetch]
-	prune = true

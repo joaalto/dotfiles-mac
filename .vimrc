@@ -117,10 +117,11 @@ set noro
 set diffopt=filler,vertical
 
 " autoread and autowrite
-augroup save
-  au!
-  au InsertLeave * wall
-augroup END
+"augroup save
+" au!
+" au InsertLeave * wall
+"augroup END
+
 set nohidden
 set nobackup
 set noswapfile
